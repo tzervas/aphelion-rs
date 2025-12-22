@@ -6,8 +6,17 @@ pub struct Config {
 }
 
 /// Common Error enum for robust error handling
+#[derive(Debug)]
 pub enum AphelionError {
     NetworkError,
     DatabaseError,
     // ... other errors
 }
+
+// Re-export modules
+pub mod config;
+pub mod network;
+pub mod database;
+pub mod package;
+pub mod debian;
+pub mod utils;

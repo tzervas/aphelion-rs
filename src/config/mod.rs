@@ -1,10 +1,10 @@
 // Configuration logic and structs
 
 /// Initialize the configuration
-pub fn init() -> super::Config {
+pub fn init() -> crate::Config {
     // Load or create configuration
     // Return the configuration struct
-    super::Config {
+    crate::Config {
         // Fields here
     }
 }

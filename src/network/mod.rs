@@ -1,15 +1,14 @@
 // Networking logic for fetching repository data
 
-use async_std::task;
 use reqwest::Client;
-use super::AphelionError;
+use crate::AphelionError;
 
 /// Fetch repository data asynchronously
-pub async fn fetch_repo_data(config: &super::Config) -> Result<(), AphelionError> {
+pub async fn fetch_repo_data(_config: &crate::Config) -> Result<String, AphelionError> {
     // Initialize HTTP client
-    let client = Client::new();
+    let _client = Client::new();
     
     // Fetch repository data
     // Return the result
-    Ok(())
+    Ok(String::new())
 }
