@@ -6,15 +6,15 @@ Our code of conduct is guided by classical liberal values. The focus is on the p
 
 ## Getting Started
 
-1. Fork the repository on GitLab.
+1. Fork the repository on GitHub.
 2. Clone your fork locally.
 3. Create a new branch to work on.
 4. Make your changes.
-5. Push your changes back to your fork on GitLab.
+5. Push your changes back to your fork on GitHub.
 
-## Merge Requests
+## Pull Requests
 
-1. Create a new merge request from your forked repository to the main project repository.
+1. Create a new pull request from your forked repository to the main project repository.
 2. Describe your changes in detail and link any relevant issues.
 3. Please ensure your code adheres to Rust's formatting and linting standards (`rustfmt` and `clippy`).
 4. Make sure your changes pass all the tests in the CI pipeline.

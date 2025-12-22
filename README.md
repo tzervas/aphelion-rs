@@ -12,7 +12,7 @@ The project is built using Rust and leverages libraries like Tokio for concurren
 
 ## Development Environment
 
-The project uses GitLab for version control, MIT as the license, and Docker for development and testing.
+The project uses GitHub for version control, MIT as the license, and Docker for development and testing.
 
 ## Milestones
 
@@ -124,7 +124,7 @@ For all notable changes to this project, see our [CHANGELOG](CHANGELOG.md) file.
 2. **From Source**
 
     ```bash
-    git clone https://gitlab.com/your-username/aphelion-rs.git
+    git clone https://github.com/tzervas/aphelion-rs.git
     cd aphelion-rs
     cargo build --release
     ```
