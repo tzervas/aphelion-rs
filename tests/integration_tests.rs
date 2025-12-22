@@ -2,18 +2,18 @@
 
 #[cfg(test)]
 mod tests {
-    use super::*;
+    use aphelion_rs::package;
 
     #[test]
     fn test_install_package() {
         // Test logic for installing a package
-        assert_eq!(package::install("test_package").is_ok(), true);
+        assert!(package::install("test_package").is_ok());
     }
 
     #[test]
     fn test_remove_package() {
         // Test logic for removing a package
-        assert_eq!(package::remove("test_package").is_ok(), true);
+        assert!(package::remove("test_package").is_ok());
     }
 
     // ... other tests
