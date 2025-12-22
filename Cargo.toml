@@ -1,21 +1,37 @@
 [package]
-name = "aphelion"
+name = "aphelion-rs"
 version = "0.1.0"
 edition = "2021"
-authors = ["Tyler Zervas"]
-description = "A modern, optimized, and user-friendly Linux package manager written in Rust"
-repository = "https://github.com/tzervas/aphelion-rs"
+authors = ["Tyler Zervas <albedo.black.1@gmail.com>"]
+description = "A modern, optimized Linux package manager focusing initially on Debian and Ubuntu compatibility."
 license = "MIT"
-readme = "README.md"
-keywords = ["package-manager", "linux", "cli"]
-categories = ["command-line-utilities"]
+repository = "https://github.com/tzervas/aphelion-rs"
 
 [dependencies]
-clap = { version = "4.5", features = ["derive"] }
-anyhow = "1.0"
-# tokio = { version = "1.42", features = ["full"] }  # Uncomment when async functionality is needed
-# serde = { version = "1.0", features = ["derive"] }  # Uncomment when serialization is needed
-# serde_json = "1.0"  # Uncomment when JSON support is needed
+tokio = { version = "1", features = ["full"] }
+structopt = { version = "0.3", optional = true }
+env_logger = "0.10.0"
+async-std = "1.10.0"
+clap = "4.4.6"
+reqwest = { version = "0.11", optional = true }
+serde = "1.0"
+serde_json = "1"
+sqlite = { version = "0.31.1", optional = true }
+log = "0.4"
+tui = "0.19.0"
+crossterm = "0.27"
 
 [dev-dependencies]
-tempfile = "3.14"
+tokio = "1.0"
+tokio-test = "0.4"
+assert_cmd = "2"
+tempfile = "3"
+
+
+[build-dependencies]
+
+[features]
+default = ["cli", "networking", "database"]
+cli = ["structopt"]
+networking = ["reqwest"]
+database = ["sqlite"]
