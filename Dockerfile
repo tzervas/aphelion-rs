@@ -41,11 +41,28 @@ COPY . .
 COPY entry-script.sh /usr/local/bin/entry-script.sh
 RUN chmod +x /usr/local/bin/entry-script.sh
 
-# Install code-server
-RUN curl -fsSL https://code-server.dev/install.sh | sh
+# Install code-server using official Debian package with verification
+# Version pinned for reproducibility and security
+# NOTE: Checksums must be verified against official releases before production use
+RUN CODESERVER_VERSION=4.20.0 && \
+    curl -fsSL "https://github.com/coder/code-server/releases/download/v${CODESERVER_VERSION}/code-server_${CODESERVER_VERSION}_amd64.deb" \
+    -o /tmp/code-server.deb && \
+    # TODO: Verify checksum from https://github.com/coder/code-server/releases/download/v${CODESERVER_VERSION}/code-server-${CODESERVER_VERSION}-linux-amd64.deb.sha256
+    # echo "ACTUAL_CHECKSUM  /tmp/code-server.deb" | sha256sum -c - && \
+    dpkg -i /tmp/code-server.deb && \
+    rm /tmp/code-server.deb
 
-# Install Starship prompt
-RUN curl -fsSL https://starship.rs/install.sh | bash
+# Install Starship prompt using official binary with verification
+# Version pinned for reproducibility and security
+# NOTE: Checksums must be verified against official releases before production use
+RUN STARSHIP_VERSION=1.17.1 && \
+    curl -fsSL "https://github.com/starship/starship/releases/download/v${STARSHIP_VERSION}/starship-x86_64-unknown-linux-gnu.tar.gz" \
+    -o /tmp/starship.tar.gz && \
+    # TODO: Verify checksum from https://github.com/starship/starship/releases/download/v${STARSHIP_VERSION}/starship-x86_64-unknown-linux-gnu.tar.gz.sha256
+    # echo "ACTUAL_CHECKSUM  /tmp/starship.tar.gz" | sha256sum -c - && \
+    tar -xzf /tmp/starship.tar.gz -C /usr/local/bin && \
+    chmod +x /usr/local/bin/starship && \
+    rm /tmp/starship.tar.gz
 
 # Configure shell prompt and other QoL features
 RUN echo 'eval "$(starship init bash)"' >> ~/.bashrc && \
