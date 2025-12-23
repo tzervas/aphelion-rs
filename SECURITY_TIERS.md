@@ -2,7 +2,7 @@
 
 ## Overview
 
-Aphelion-rs is designed to defend against **state-level actor threats** in package management. Given the nature of crawling packages from public VCS platforms (GitHub, GitLab, Gitea), the system must assume packages are potentially hostile and may contain sophisticated malware including rootkits, Pegasus-level spyware, or advanced persistent threats (APTs).
+Aphelion-rs is designed to defend against **nation-state actor threats** in package management. Given the nature of crawling packages from public VCS platforms (GitHub, GitLab, Gitea), the system must assume packages are potentially hostile and may contain sophisticated malware including rootkits, Pegasus-level spyware, or advanced persistent threats (APTs).
 
 ---
 

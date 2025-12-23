@@ -436,7 +436,7 @@ The system shall store version differentials:
 - Verify accuracy via cosine similarity
 
 **Requirements**:
-- Cosine similarity ≥ 0.9999 (bitwise perfection)
+- Cosine similarity ≥ 0.9999999 (near-bitwise perfection, accounting for floating-point precision)
 - Reconstruction must be deterministic
 - Storage reduction >80% for similar versions
 
@@ -855,7 +855,7 @@ CREATE TABLE dependencies (
 - [ ] Holographic storage operational
 - [ ] Multi-version management works
 - [ ] Storage reduction >80% for versions
-- [ ] Cosine similarity ≥ 0.9999
+- [ ] Cosine similarity ≥ 0.9999999 (near-bitwise perfection)
 - [ ] Production ready
 
 ---

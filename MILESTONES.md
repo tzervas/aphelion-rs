@@ -621,7 +621,7 @@ This document defines the development milestones for Aphelion-rs, organized by p
 **Acceptance Criteria**:
 - Packages encode to HDC vectors
 - Decoding restores original package
-- Cosine similarity ≥ 0.9999
+- Cosine similarity ≥ 0.9999999 (near-bitwise perfection)
 
 ---
 
