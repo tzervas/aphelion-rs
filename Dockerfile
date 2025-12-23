@@ -38,7 +38,7 @@ EXPOSE 8080 443
 COPY . .
 
 # Copy the entry script into the container
-COPY entry-script-detailed-comments.sh /usr/local/bin/entry-script.sh
+COPY entry-script.sh /usr/local/bin/entry-script.sh
 RUN chmod +x /usr/local/bin/entry-script.sh
 
 # Install code-server
