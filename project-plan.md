@@ -298,7 +298,7 @@ Aphelion-rs aims to revolutionize Linux package management by offering a modern,
 
 - **Import Details**: Criterion is chosen for performance testing.
 - **Likely Elements to Use**: Benchmarking critical code paths.
-- **Implementation Considerations**: Use for benchmarking package installation and update processes.sd
+- **Implementation Considerations**: Use for benchmarking package installation and update processes.
 - **Optimization Considerations**: Use statistical methods to interpret benchmark results.
 
 ### Debian Compatibility Plugin
