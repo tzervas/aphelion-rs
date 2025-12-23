@@ -130,7 +130,7 @@ For all notable changes to this project, see our [CHANGELOG](CHANGELOG.md) file.
     ```
 
 3. **Pre-compiled Binaries**
-    Pre-compiled binaries will be offered for various platforms as GitLab releases.
+    Pre-compiled binaries will be offered for various platforms as GitHub releases, available at <https://github.com/tzervas/aphelion-rs/releases>.
 
 4. **Package Managers**
     `.deb` or `.rpm` packages will be provided for Linux users.
