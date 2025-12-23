@@ -16,7 +16,7 @@ ENV RUN_APHELION_RS=false \
     CUSTOM_NU_FILE="" \
     DEBIAN_FRONTEND=noninteractive \
     RUN_APPLICATION=false \
-    APP_NAME=<your_app_name_here>
+    APP_NAME=aphelion-rs
 
 # Update packages and install dependencies
 RUN apt-get update && apt-get install -y \
