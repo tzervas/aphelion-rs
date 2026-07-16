@@ -1,0 +1,12 @@
+{
+  "name": "Aphelion-rs Dev Container",
+  "image": "rust:latest",
+  "extensions": [
+    "rust-lang.rust",
+    "editorconfig.editorconfig",
+    "mutantdino.resourcemonitor"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  }
+}
