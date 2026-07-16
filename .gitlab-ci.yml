@@ -1,0 +1,47 @@
+
+# This is the GitLab CI/CD configuration file for the aphelion-rs Rust project
+image: rust:latest
+
+variables:
+  CARGO_HOME: $CI_PROJECT_DIR/cargo
+  RUN_BUILD: "off"
+  RUN_TESTS: "off"
+  RUN_DEPLOY: "off"
+  RUN_PIPELINE: "off"
+
+cache:
+  paths:
+    - $CI_PROJECT_DIR/cargo
+
+.before_script:
+  script:
+    - 'if [ "$RUN_PIPELINE" = "off" ]; then exit 0; fi'
+
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - 'if [ "$RUN_BUILD" = "off" ]; then exit 0; fi'
+    - cargo build --release
+  artifacts:
+    paths:
+      - target/release/aphelion-rs
+
+test:
+  stage: test
+  script:
+    - 'if [ "$RUN_TESTS" = "off" ]; then exit 0; fi'
+    - cargo test
+
+deploy:
+  stage: deploy
+  only:
+    - master
+  script:
+    - 'if [ "$RUN_DEPLOY" = "off" ]; then exit 0; fi'
+    - echo "Deploying..."
+    # Add your deployment scripts here
