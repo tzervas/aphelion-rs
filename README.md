@@ -1,5 +1,10 @@
 # Aphelion-rs: A Modern Linux Package Manager
 
+<!-- FLEET-BADGES:BEGIN -->
+[![CI](https://github.com/tzervas/aphelion-rs/actions/workflows/fleet-ci.yml/badge.svg?branch=main)](https://github.com/tzervas/aphelion-rs/actions/workflows/fleet-ci.yml?query=branch%3Amain)
+[![Security](https://github.com/tzervas/aphelion-rs/actions/workflows/fleet-security.yml/badge.svg?branch=main)](https://github.com/tzervas/aphelion-rs/actions/workflows/fleet-security.yml?query=branch%3Amain)
+<!-- FLEET-BADGES:END -->
+
 Aphelion-rs aims to revolutionize Linux package management by offering a modern, optimized, and user-friendly solution written in Rust.
 
 ## Project Overview
